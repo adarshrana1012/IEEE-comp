@@ -1,9 +1,9 @@
-import "./Events.css";
+import "./Committee.css";
 
-function Events() {
+function Committee() {
   return (
     <div className="events">
-      <h2>Events</h2>
+      <h2>Committee</h2>
       <div className="event-list">
         <div className="event-card">AI Workshop</div>
         <div className="event-card">Web Dev Bootcamp</div>
@@ -13,4 +13,4 @@ function Events() {
   );
 }
 
-export default Events;
+export default Committee;
