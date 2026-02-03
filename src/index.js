@@ -5,20 +5,28 @@ import './index.css';
 
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import Home from "./pages/Home";
-import Committee from "./pages/Committee";
-import Team from "./pages/Team";
-import About from "./pages/About";
+import HomePage from "./Landing_page/Home/HomePage";
+import AboutPage from "./Landing_page/About/AboutPage";
+import HighlightsPage from "./Landing_page/Highlights/HighlightsPage";
+import BrochurePage from "./Landing_page/Brochure/BrochurePage";
+import CommitteePage from "./Landing_page/Committee/CommitteePage";
+import RegistrationPage from "./Landing_page/Registration/RegistrationPage";
+import ContactUsPage from "./Landing_page/contactUs/ContactUsPage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Navbar />
     <Routes>
-      <Route path='/' element={<Home/>}></Route>
-      <Route path='/about' element={<About/>}></Route>
-      <Route path='/events' element={<Committee/>}></Route>
-      <Route path='/Team' element={<Team/>}></Route>
+      <Route path='/' element={<HomePage />}></Route>
+      <Route path='/brochure' element={<BrochurePage />}></Route>
+      <Route path='/about' element={<AboutPage />}></Route>
+      <Route path='/highlights' element={<HighlightsPage />}></Route>
+      <Route path='/callForPapers' element={<callForPapersPage />}></Route>
+      <Route path='/committee' element={<CommitteePage />}></Route>
+      <Route path='/registration' element={<RegistrationPage />}></Route>
+      <Route path='/contactUs' element={<ContactUsPage />}></Route>
+      
     </Routes>
     <Footer />
   </BrowserRouter>
