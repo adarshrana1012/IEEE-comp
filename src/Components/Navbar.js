@@ -19,13 +19,14 @@ function Navbar() {
         </div>
 
         {/* Links */}
+        <div  className="link ">
         <ul className={`nav-link ${menuOpen ? "active" : ""}`}>
           {[
-            ["/", "Home"],
+            ["/",   "Home"],
             ["/brochure", "Brochure"],
             ["/about", "About"],
             ["/Highlights", "HighLights"],
-            ["/callForPapers", "Call For Papers"],
+            ["/callForPapers", "Papers"],
             ["/committee", "Committee"],
             ["/registration", "Registration"],
             ["/contactUs", "Contact Us"],
@@ -37,6 +38,7 @@ function Navbar() {
             </li>
           ))}
         </ul>
+        </div>
       </div>
     </nav>
   );
