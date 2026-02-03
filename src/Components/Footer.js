@@ -1,38 +1,66 @@
+import React from "react";
 import "./Footer.css";
+import { FaTwitter, FaFacebookF, FaGlobe, FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
 
-        {/* Left */}
-        <div className="footer-section">
-          <h3>IEEE XYZ Student Branch</h3>
-          <p>Advancing Technology for Humanity</p>
+        {/* LEFT */}
+        <div className="footer-col">
+          <h2>IEEE 2027</h2>
+          <p>
+            The International Conference on Nexus of Digitalization,
+            Intelligence, and Applications serves as a premier platform
+            for researchers and practitioners to share innovations and
+            advancements in the field.
+          </p>
         </div>
 
-        {/* Middle */}
-        <div className="footer-section">
-          <h4>Quick Links</h4>
+        {/* MIDDLE */}
+        <div className="footer-col">
+          <h3>Quick Links</h3>
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Events</li>
-            <li>Team</li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#papers">Call for Papers</a></li>
+            <li><a href="#register">Registration</a></li>
+            <li><a href="#committee">Committee</a></li>
           </ul>
         </div>
 
-        {/* Right */}
-        <div className="footer-section">
-          <h4>Contact</h4>
-          <p>Email: ieee@xyz.edu</p>
-          <p>XYZ College, India</p>
+        {/* RIGHT */}
+        <div className="footer-col">
+          <h3>Contact Us</h3>
+          <p>Army Institute of Technology, Pune, India</p>
+          <p>email@aitpune.edu.in</p>
+          <p>Phone: 35</p>
         </div>
 
       </div>
 
+      <hr />
+
       <div className="footer-bottom">
-        © {new Date().getFullYear()} IEEE XYZ Student Branch
+        <p>© 2027 Department of Computer Engineering. All Rights Reserved.</p>
+
+        <div className="socials">
+          <a href="https://x.com/ait_pune" target="_blank" rel="noreferrer">
+            <FaTwitter />
+          </a>
+
+          <a href="https://www.aitpune.com/" target="_blank" rel="noreferrer">
+            <FaGlobe />
+          </a>
+
+          <a href="https://www.facebook.com/aitpune/" target="_blank" rel="noreferrer">
+            <FaFacebookF />
+          </a>
+
+          <a href="https://www.linkedin.com/school/army-institute-of-technology-ait-pune/posts/?feedView=all" target="_blank" rel="noreferrer">
+            <FaLinkedinIn />
+          </a>
+        </div>
       </div>
     </footer>
   );
