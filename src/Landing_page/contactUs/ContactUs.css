@@ -12,6 +12,26 @@
   font-weight: 700;
 }
 
+.committee-hero {
+  background: linear-gradient(to right, #0f172a, #1e293b);
+  color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 800px;
+  margin: auto;
+}
+
 .venue-container {
   display: grid;
   grid-template-columns: 1fr 1.2fr;

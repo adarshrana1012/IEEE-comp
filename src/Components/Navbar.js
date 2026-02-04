@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <nav className="navBar">
       <div className="navbar-container">
-        <div className="logo">AIT</div>
+        <div className="logo"><img src="https://upload.wikimedia.org/wikipedia/en/6/6a/AIT_Pune_logo.gif" style={{width:"100%"}}/></div>
 
         {/* Hamburger */}
         <div

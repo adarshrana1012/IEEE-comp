@@ -6,6 +6,10 @@
   font-family: Arial, sans-serif;
 }
 
+.Paper-section{
+  background-color: #f3f6fb;
+}
+
 /* Main container */
 .container {
   min-height: 50vh;
@@ -70,6 +74,26 @@
 .track-list li {
   margin-bottom: 0.4rem;
   font-size: 0.95rem;
+}
+
+.committee-hero {
+  background: linear-gradient(to right, #0f172a, #1e293b);
+  color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 800px;
+  margin: auto;
 }
 
 /* Timeline Container */

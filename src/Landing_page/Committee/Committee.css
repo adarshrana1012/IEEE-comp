@@ -1,21 +1,251 @@
-.events {
-  padding: 60px 40px;
+/* ===============================
+   GLOBAL PAGE
+================================ */
+.committee-page {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: #0f172a;
 }
 
-.events h2 {
-  color: #00629b;
-  margin-bottom: 30px;
-}
-
-.event-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.event-card {
-  border: 1px solid #ddd;
-  padding: 25px;
-  border-radius: 6px;
+/* ===============================
+   HERO SECTION
+================================ */
+.committee-hero {
+  background: linear-gradient(to right, #0f172a, #1e293b);
+  color: #ffffff;
+  padding: 100px 20px;
   text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ===============================
+   COMMON SECTIONS
+================================ */
+.section {
+  padding: 80px 20px;
+}
+
+.section.white {
+  background-color: #ffffff;
+}
+
+.section.gray {
+  background-color: #f1f5f9;
+}
+
+/* ===============================
+   SECTION TITLES
+================================ */
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.divider {
+  width: 90px;
+  height: 4px;
+  background-color: #3b82f6;
+  margin: 16px auto;
+  border-radius: 2px;
+}
+
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+/* ===============================
+   GRID SYSTEM
+================================ */
+.grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  gap: 28px;
+}
+
+.grid.two {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid.three {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.grid.four {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* ===============================
+   CARD BASE (ALL CARDS)
+================================ */
+.patron-card,
+.member-card,
+.simple-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* ===============================
+   PATRON COMMITTEE CARDS
+================================ */
+.patron-card {
+  background: linear-gradient(135deg, #4a699c, #38599f);
+  color: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
+}
+
+.patron-card svg {
+  margin-bottom: 14px;
+}
+
+.patron-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(37, 99, 235, 0.45);
+}
+
+/* ===============================
+   ORGANIZING COMMITTEE CARDS
+================================ */
+.member-card {
+  background-color: #ffffff;
+  padding: 26px;
+  border-radius: 16px;
+  border: 2px solid #e2e8f0;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.member-card svg {
+  margin-bottom: 12px;
+}
+
+.member-card:hover {
+  transform: translateY(-8px);
+  border-color: #3b82f6;
+  box-shadow: 0 22px 48px rgba(59, 130, 246, 0.25);
+}
+
+/* ===============================
+   SIMPLE CARDS (Advisory & Technical)
+================================ */
+.simple-card {
+  background-color: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1.5px solid #e5e7eb;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.simple-card:hover {
+  transform: translateY(-6px);
+  border-color: #3b82f6;
+  box-shadow: 0 18px 38px rgba(59, 130, 246, 0.18);
+}
+
+/* ===============================
+   TEXT STYLES
+================================ */
+.highlight {
+  color: #ffffff;
+  font-weight: 700;
+  margin: 6px 0;
+}
+
+.member-card p,
+.simple-card p {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.member-card h3,
+.simple-card h3,
+.simple-card h4 {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* ===============================
+   EMAIL LINK
+================================ */
+.email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  margin-top: 14px;
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.member-card:hover .email {
+  color: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 60px 16px;
+  }
+}
+
+/* ===============================
+   TOUCH DEVICES (NO HOVER)
+================================ */
+@media (hover: none) {
+  .patron-card:hover,
+  .member-card:hover,
+  .simple-card:hover {
+    transform: none;
+    box-shadow: inherit;
+  }
 }

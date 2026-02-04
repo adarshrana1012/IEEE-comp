@@ -23,8 +23,8 @@ function Footer() {
           <h3>Quick Links</h3>
           <ul>
             <li><a href="/about">About</a></li>
-            <li><a href="/papers">Call for Papers</a></li>
-            <li><a href="/register">Registration</a></li>
+            <li><a href="/callForPapers">Call for Papers</a></li>
+            <li><a href="/registration">Registration</a></li>
             <li><a href="/committee">Committee</a></li>
           </ul>
         </div>
