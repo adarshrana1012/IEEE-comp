@@ -80,7 +80,7 @@ function CallForPapers() {
         ))}
       </ul>
     </div>
-    <h1 className='st'>Paper Topics</h1>
+    <h1 className='st'>Paper Topic</h1>
     <div className='paper-topics'>
      
   {tracks.flatMap(track => track.items).map((topic, idx) => (
