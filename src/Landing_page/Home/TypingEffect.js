@@ -5,7 +5,7 @@ function TypingEffect({
   typingSpeed = 150,
   deletingSpeed = 120,
   pauseTime = 800,
-  minLength = 1, // 👈 stop deleting at this length
+  minLength = 1, 
 }) {
   const [displayText, setDisplayText] = useState("");
   const [index, setIndex] = useState(0);

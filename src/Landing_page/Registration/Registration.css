@@ -63,7 +63,7 @@
 
 .fee-card {
   background: white;
-  border-radius: 16px;
+  border-radius: 30px;
   padding: 30px;
   border: 2px solid #e5e7eb;
   text-align: center;
@@ -76,7 +76,6 @@
 }
 
 .fee-card.highlight {
-  border: 4px solid #3b82f6;
   transform: scale(1.05);
 }
 
