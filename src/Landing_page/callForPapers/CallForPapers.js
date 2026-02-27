@@ -6,44 +6,46 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 function CallForPapers() {
   const tracks = [
     {
-      title: "Track 1: Digitalization",
+      title: "Track 1",
       items: [
-        "Digital Transformation and Innovation",
-        "Human-Computer Interaction and Digital User Experience",
-        "Digital Ethics, Security, and Governance",
+        "Quantum Computing Theory & Algorithms",
+    "Quantum Communication & Cryptography",
+    "Quantum Networks and Internet"
+
       ],
     },
     {
-      title: "Track 2: Intelligence",
+      title: "Track 2",
       items: [
-        "Artificial Intelligence and Machine Learning",
-        "Data Science, Analytics, and Big Data",
-        "Deep Learning in Computer Vision and Natural Language Processing",
+     "Quantum Error Correction & Fault Tolerance",
+    "Quantum Hardware, Devices, and Architectures",
+    "Quantum Machine Learning & AI"
+
       ],
     },
     {
-      title: "Track 3: Applications",
+      title: "Track 3",
       items: [
-        "Internet of Things (IoT) and Smart Technologies",
-        "Applications of Digitalization and Intelligence in Key Sectors",
-        "Future Trends and Innovations in Defense Sector",
+      "Quantum Simulation and Modeling",
+      "Quantum Information Theory",
+      "Quantum Entanglement & Teleportation"
+
       ],
     },
     {
-      title: "Track 4: Consumer Tech",
+      title: "Track 4",
       items: [
-        "AI & Machine Learning in Consumer Applications",
-        "AR, VR, and XR in Consumer Technologies",
+         "Applications of Quantum Technologies in Industry"
       ],
     },
   ];
 
   const dates = [
-    { label: "Last Date for Receiving Full Paper", date: "15th April, 2026" },
-    { label: "Intimation of Acceptance", date: "30th June, 2026" },
-    { label: "Last Date for Camera Ready Copy", date: "15th July, 2026" },
-    { label: "Last Date of Registration", date: "18th-19th Sept, 2026" },
-    { label: "Conference Dates", date: "18th-19th Sept, 2026" },
+    { label: "Abstract Submission Date: ", date: "10 Feb 2027" },
+    { label: "Full Paper Submission Date:", date: "20 Feb 2027" },
+    { label: "Notification of Acceptance Date", date: "10 May 2027" },
+    { label: "Final Paper Submission Date", date: "30 June 2027" },
+    // { label: "Conference Dates", date: "18th-19th Sept, 2026" },
   ];
 
   return (
@@ -95,7 +97,7 @@ function CallForPapers() {
           </ul>
         </div>
         <h1 className="st">Paper Topic</h1>
-        <div className="paper-topics">
+        <div className="paper-topics mb">
           {tracks
             .flatMap((track) => track.items)
             .map((topic, idx) => (

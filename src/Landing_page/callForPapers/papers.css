@@ -9,6 +9,9 @@
 .Paper-section{
   background-color: #f3f6fb;
 }
+.mb{
+  margin-bottom: 2rem;
+}
 
 /* Main container */
 .container {
