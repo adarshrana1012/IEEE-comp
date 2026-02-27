@@ -64,7 +64,7 @@ export default function Registration() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          🎉 Early Bird Registration: Save 20% if you register before 10th July 2027
+          🎉 Early Bird Registration: Save 8% if you register before 10th July 2027
         </motion.p>
       </section>
 
@@ -130,10 +130,10 @@ export default function Registration() {
                   <button className="register-btn">Register Now</button>
                 </td>
                 <td className="fee-table__cell fee-table__cell--alt">
-                  <button className="register-btn register-btn--primary">Register Now</button>
+                  <button className="register-btn">Register Now</button>
                 </td>
                 <td className="fee-table__cell fee-table__cell--alt-highlight">
-                  <button className="register-btn register-btn--primary">Register Now</button>
+                  <button className="register-btn ">Register Now</button>
                 </td>
               </tr>
             </tbody>

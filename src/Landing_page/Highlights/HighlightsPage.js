@@ -34,7 +34,7 @@ function Highlights() {
 
           <div className="highlight-card">
             <FaStar className="star" />
-            <p>All accepted papers submitted to IEEE Xplore Digital Library</p>
+            <p>All accepted and presented papers will be submitted to IEEE for possible inclusion in the IEEE Xplore Digital Library</p>
           </div>
 
           <div className="highlight-card">

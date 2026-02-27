@@ -24,17 +24,7 @@ function About() {
           <div className="about-card">
             <h2>About The Conference</h2>
               <p>
-                International Conference on Nexus of Digitalization, Intelligence,
-                and Applications (ICNDIA-2026) serves as a premier platform for
-                researchers and practitioners to present and discuss the
-                transformative impact of digital technologies and artificial
-                intelligence across various sectors. Focusing on the convergence
-                of these fields, the conference aims to foster collaboration and
-                knowledge sharing, addressing both the opportunities and
-                challenges of the digital transformation. Attendees will engage in
-                insightful discussions, attend workshops, and network with leading
-                experts, driving forward thinking solutions that harness the power
-                of technology for societal advancement.
+                IQICSA 2027 is an IEEE international conference focused on quantum computing, secure communication systems, and their real-world applications. It brings together researchers, academics, and industry professionals to discuss advancements in Quantum Key Distribution (QKD), qubit architectures, post-quantum cryptography, and quantum machine learning. All accepted papers are published in IEEE Xplore, indexed in Scopus and Web of Science, ensuring global visibility and recognition. It serves as a premier platform for collaboration and innovation at the intersection of quantum science and modern communication engineering.
               </p>
           </div>
 
@@ -58,7 +48,7 @@ function About() {
           {/* DEPARTMENT */}
           <div className="about-card">
             <h2>About The Department</h2>
-            <p>The Department of Computer Engineering was established in 1994. The department strives hard to provide a very good learning experience to its students. The department has developed state-of-art infrastructure, well-equipped laboratories, departmental library, and classrooms with modern teaching aids. The department has quality intake, experienced and dedicated faculty and staff, excellent academic results and placements.</p>
+            <p>The Department of Computer Engineering was established in 1994 with a strong vision to nurture technically skilled and innovative engineers. The department strives hard to provide a very good learning experience to its students. The department has developed state-of-art infrastructure, well-equipped laboratories, departmental library, and classrooms with modern teaching aids. The department has quality intake, experienced and dedicated faculty and staff, excellent academic results and placements. It actively promotes research, industry collaboration, and participation in national and international competitions to enhance students' overall development</p>
           </div>
         </div>
       </section>
