@@ -4,11 +4,13 @@
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  background-color: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);;
 }
 
 .Paper-section{
-  background-color: #f3f6fb;
+  background-color:linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
+
 .mb{
   margin-bottom: 2rem;
 }
@@ -195,6 +197,7 @@
   overflow: hidden; /* Hide cards during slide-in animation */
 }
 
+
 /* Keyframe animation for sliding in from left */
 @keyframes slideInFromLeft {
   from {
@@ -267,6 +270,28 @@
   color: #333;
   line-height: 1.4;
   transition: color 0.3s ease;
+}
+.chal-chal{
+  display : flex;
+  flex-direction: column;
+  gap : 1rem;
+}
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 /* Responsive adjustments */

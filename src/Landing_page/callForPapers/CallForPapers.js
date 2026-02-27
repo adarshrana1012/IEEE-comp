@@ -35,7 +35,12 @@ function CallForPapers() {
     {
       title: "Track 4",
       items: [
-         "Applications of Quantum Technologies in Industry"
+         "Applications of Quantum Technologies in Industry",
+    "Quantum Computing in Finance & Risk Analysis",
+    "Quantum Applications in Drug Discovery & Healthcare",
+    "Quantum Optimization for Supply Chain & Logistics",
+    "Quantum Sensing & Metrology in Industrial Systems",
+    "Cybersecurity Applications of Post-Quantum Cryptography"
       ],
     },
   ];
@@ -47,6 +52,8 @@ function CallForPapers() {
     { label: "Final Paper Submission Date", date: "30 June 2027" },
     // { label: "Conference Dates", date: "18th-19th Sept, 2026" },
   ];
+  const topics = tracks.flatMap((track) => track.items);
+  const dupli_topics = [...topics , ...topics];
 
   return (
     <>
@@ -59,13 +66,13 @@ function CallForPapers() {
         >
           <h1>Call for Papers</h1>
           <div className="divider" />
-          <p>Meet the distinguished team behind the conference</p>
+         
         </motion.div>
       </section>
       <section className="Paper-section">
-        <div className="container">
+        {/* <div className="container">
           {/* Tracks section */}
-          <div className="cards">
+          {/* <div className="cards">
             {tracks.map((track, index) => (
               <div className="box" key={index}>
                 <div className="track-box">
@@ -78,8 +85,35 @@ function CallForPapers() {
                 </div>
               </div>
             ))}
+          </div> */}
+         <h1 className="st">Paper Topics</h1>
+
+<div className="paper-topics mb">
+  <div className="chal-chal">
+    {tracks.map((track, index) => {
+      const duplicated = [...track.items, ...track.items];
+
+      return (
+        <div className="track-slider-wrapper" key={index}>
+          
+
+          <div className="slider-wrapper">
+            <div className="slider-track">
+              {duplicated.map((topic, idx) => (
+                <div className="pap-card" key={idx}>
+                  <FaRegCalendarAlt className="card-icon" />
+                  <p className="card-text">{topic}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+      );
+    })}
+  </div>
+</div>
+      
+         
         <div className="timeline-container">
           <h2 className="timeline-title">Important Dates</h2>
           <ul className="timeline-list">
@@ -96,18 +130,7 @@ function CallForPapers() {
             ))}
           </ul>
         </div>
-        <h1 className="st">Paper Topic</h1>
-        <div className="paper-topics mb">
-          {tracks
-            .flatMap((track) => track.items)
-            .map((topic, idx) => (
-              <div className="pap-card" key={idx}>
-                <FaRegCalendarAlt className="card-icon" />{" "}
-                {/* or FaBook if you want book icon */}
-                <p className="card-text">{topic}</p>
-              </div>
-            ))}
-        </div>
+        
       </section>
     </>
   );
