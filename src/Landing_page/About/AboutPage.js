@@ -58,7 +58,7 @@ function About() {
           {/* DEPARTMENT */}
           <div className="about-card">
             <h2>About The Department</h2>
-            <p>{/* Empty for now */}</p>
+            <p>The Department of Computer Engineering was established in 1994. The department strives hard to provide a very good learning experience to its students. The department has developed state-of-art infrastructure, well-equipped laboratories, departmental library, and classrooms with modern teaching aids. The department has quality intake, experienced and dedicated faculty and staff, excellent academic results and placements.</p>
           </div>
         </div>
       </section>

@@ -3,126 +3,169 @@
    ====================== */
 .navBar {
   width: 100%;
-  height: 72px;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position:absolute;
+  background: #ffffff;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
-}
-
-.navBar:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
 }
 
 /* ======================
    CONTAINER
    ====================== */
 .navbar-container {
-  width: 100%;
   max-width: 1200px;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 68px;
   display: flex;
-  align-items: center;        /* ✅ vertical alignment */
+  align-items: center;
   justify-content: space-between;
 }
 
 /* ======================
    LOGO
    ====================== */
-.logo {
-  display: flex;
-  align-items: center;
-}
-
 .logo img {
-  height: 44px;               /* ✅ consistent navbar height */
+  height: 46px;
   width: auto;
   object-fit: contain;
+  display: block;
 }
 
 /* ======================
-   NAV LINKS (DESKTOP)
+   DESKTOP NAV LINKS
    ====================== */
-.link {
-  display: flex;
-  align-items: center;
-}
-
 .nav-link {
   display: flex;
-  align-items: center;        /* ✅ same axis as logo */
-  gap: 18px;
+  align-items: center;
+  gap: 4px;
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .nav-link li a {
-  font-size: 17px;
+  font-size: 14.5px;
   font-weight: 500;
-  color: #000;
+  color: #1e293b;
   text-decoration: none;
-  padding: 6px 10px;
-  border-radius: 10px;
-  transition: color 0.3s ease;
+  padding: 7px 12px;
+  border-radius: 8px;
+  transition: color 0.25s ease, background 0.25s ease;
+  white-space: nowrap;
 }
 
 .nav-link li a:hover {
-  color: #0e9bff;
-  background-color: rgba(14, 155, 255, 0.08);
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.08);
 }
 
 /* ======================
-   HAMBURGER
+   HAMBURGER (3-line animated)
    ====================== */
 .hamburger {
   display: none;
-  font-size: 28px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  background: none;
+  border: none;
   cursor: pointer;
-  color: black;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.hamburger:hover {
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2.5px;
+  background: #1e293b;
+  border-radius: 4px;
+  transition: transform 0.35s ease, opacity 0.25s ease, width 0.25s ease;
+  transform-origin: center;
+}
+
+/* Animate to × when open */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
 }
 
 /* ======================
-   MOBILE RESPONSIVE
+   MOBILE DRAWER
    ====================== */
-@media (max-width: 850px) {
-  .hamburger {
-    display: block;
-  }
+.mobile-drawer {
+  /* Hidden by default — sits directly below the navbar */
+  max-height: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border-top: 1px solid transparent;
+  transition: max-height 0.38s ease, border-color 0.2s;
+  /* Ensure it stacks correctly below navbar container */
+  width: 100%;
+}
 
-  .link {
-    position: absolute;
-    top: 72px;
-    left: 0;
-    width: 100%;
-  }
+.mobile-drawer.active {
+  max-height: 100vh;
+  border-top-color: #e2e8f0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+}
 
+.mobile-nav-link {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0 16px;
+}
+
+.mobile-nav-link li {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.mobile-nav-link li:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav-link li a {
+  display: flex;
+  align-items: center;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1e293b;
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s, padding-left 0.2s;
+}
+
+.mobile-nav-link li a:hover {
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.05);
+  padding-left: 36px;
+}
+
+/* ======================
+   RESPONSIVE BREAKPOINT
+   ====================== */
+@media (max-width: 860px) {
   .nav-link {
-    flex-direction: column;
-    align-items: center;
-    background-color: #f2f2f2;
-    max-height: 0;
-    overflow-y: auto;          /* ✅ SCROLLABLE */
-    transition: max-height 0.35s ease;
+    display: none; /* hide desktop links */
   }
 
-  .nav-link.active {
-    max-height: calc(100vh - 72px); /* ✅ full-screen scroll */
-  }
-
-  .nav-link li {
-    width: 100%;
-    text-align: center;
-    padding: 14px 0;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .nav-link li a {
-    font-size: 18px;
-    width: 100%;
-    display: block;
+  .hamburger {
+    display: flex; /* show hamburger */
   }
 }
